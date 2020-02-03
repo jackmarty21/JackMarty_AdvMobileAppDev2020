@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TMd-GK-kZi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Third View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ThirdViewController" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoN-WM-RG6">
+                                <rect key="frame" x="136.5" y="286" width="141" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Play Lebron"/>
+                                <connections>
+                                    <action selector="playLebron:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vCO-Ib-Yfk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6s-TU-fUq">
+                                <rect key="frame" x="147" y="425" width="120" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Play Kobe"/>
+                                <connections>
+                                    <action selector="playKobe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ho-Lc-cxi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAb-Fv-M4X">
+                                <rect key="frame" x="86.5" y="573" width="241" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Play Michael Jordan"/>
+                                <connections>
+                                    <action selector="playMJ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQ1-6h-4cN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JoN-WM-RG6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2j8-IV-q2D"/>
+                            <constraint firstItem="U6s-TU-fUq" firstAttribute="top" secondItem="JoN-WM-RG6" secondAttribute="bottom" constant="93" id="XUu-iL-N3K"/>
+                            <constraint firstItem="KAb-Fv-M4X" firstAttribute="top" secondItem="U6s-TU-fUq" secondAttribute="bottom" constant="102" id="Xop-Xi-GUV"/>
+                            <constraint firstItem="U6s-TU-fUq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bbN-nn-aLL"/>
+                            <constraint firstItem="KAb-Fv-M4X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="npi-WB-zJw"/>
+                            <constraint firstItem="U6s-TU-fUq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v9N-lc-vZs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="Yrh-x1-dPM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="279"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="fev-Sd-Hdj">
+            <objects>
+                <viewController id="l7Q-yH-h5S" customClass="SecondViewController" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UuJ-oE-exr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hz-Bq-F2x">
+                                <rect key="frame" x="113.5" y="416.5" width="187" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <state key="normal" title="Go To App"/>
+                                <connections>
+                                    <action selector="goToApp:" destination="l7Q-yH-h5S" eventType="touchUpInside" id="c6t-xK-oJu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Hz-Bq-F2x" firstAttribute="centerX" secondItem="UuJ-oE-exr" secondAttribute="centerX" id="ElP-7Y-6fR"/>
+                            <constraint firstItem="4Hz-Bq-F2x" firstAttribute="centerY" secondItem="UuJ-oE-exr" secondAttribute="centerY" id="SA9-Gh-CGE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iLG-Zj-Zz3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="Eue-Ap-USE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDP-JN-lj9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="-232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="59e-rl-sd8">
+            <objects>
+                <viewController id="m7y-bI-Ov3" customClass="ViewController" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GvE-P5-363">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Af-jP-sgu">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="m7y-bI-Ov3" id="U0m-B1-PRB"/>
+                                    <outlet property="delegate" destination="m7y-bI-Ov3" id="JgJ-qG-30f"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKF-rQ-68D">
+                                <rect key="frame" x="207" y="699" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1Af-jP-sgu" firstAttribute="centerX" secondItem="GvE-P5-363" secondAttribute="centerX" id="66S-32-iKo"/>
+                            <constraint firstItem="1Af-jP-sgu" firstAttribute="centerY" secondItem="GvE-P5-363" secondAttribute="centerY" id="98d-wB-ZKr"/>
+                            <constraint firstItem="jKF-rQ-68D" firstAttribute="centerX" secondItem="GvE-P5-363" secondAttribute="centerX" id="Aam-LC-drv"/>
+                            <constraint firstAttribute="bottom" secondItem="jKF-rQ-68D" secondAttribute="bottom" constant="197" id="nxn-mJ-Ghm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wwa-1X-YhB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="PCi-xJ-BvD"/>
+                    <connections>
+                        <outlet property="choiceLabel" destination="jKF-rQ-68D" id="I75-3Z-DhU"/>
+                        <outlet property="picker" destination="1Af-jP-sgu" id="oCa-I8-sTK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBB-9a-lVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.9710144927537" y="-879.24107142857144"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Mec-Dj-xM0">
+            <objects>
+                <tabBarController id="TMd-GK-kZi" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZZM-n2-f0H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="m7y-bI-Ov3" kind="relationship" relationship="viewControllers" id="nf2-N5-1EL"/>
+                        <segue destination="l7Q-yH-h5S" kind="relationship" relationship="viewControllers" id="bA9-kh-ptm"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="FZ9-Hp-iU3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gtu-Lq-1ii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="-554"/>
+        </scene>
+    </scenes>
+</document>
