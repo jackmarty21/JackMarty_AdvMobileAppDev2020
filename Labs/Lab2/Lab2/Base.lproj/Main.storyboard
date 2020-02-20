@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0hl-vL-IFg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NBA Champions-->
+        <scene sceneID="pUx-nz-tjh">
+            <objects>
+                <tableViewController id="QTh-IO-yDF" customClass="NBANamesController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SOZ-xK-QX3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NameCell" id="VSm-Y3-E1e">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VSm-Y3-E1e" id="uNE-Rg-nHQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="c4Q-1l-M4c" kind="show" identifier="ChampionshipsSegue" id="nwQ-Z0-Z8y"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QTh-IO-yDF" id="cE8-Vd-HIv"/>
+                            <outlet property="delegate" destination="QTh-IO-yDF" id="hlc-72-ndB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="NBA Champions" id="pjg-Gs-AdG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8WX-wq-3nm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="-494"/>
+        </scene>
+        <!--Add Championship Controller-->
+        <scene sceneID="eFM-bx-WdB">
+            <objects>
+                <viewController id="K06-G9-4fo" customClass="AddChampionshipController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wbi-F5-4Ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EuL-xD-5nq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <items>
+                                    <navigationItem title="Add Championship" id="8Y5-cD-KdC">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="PYk-cX-mOk">
+                                            <connections>
+                                                <segue destination="eSw-fk-oBu" kind="unwind" identifier="cancel" unwindAction="unwindSegue:" id="Drm-OM-fub"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="QEa-3b-FJK">
+                                            <connections>
+                                                <segue destination="eSw-fk-oBu" kind="unwind" identifier="save" unwindAction="unwindSegue:" id="ng8-K6-zbV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6cv-J3-b5R">
+                                <rect key="frame" x="10" y="85" width="394" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Championship Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyr-gG-iSn">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bB-Vl-XDe">
+                                        <rect key="frame" x="161" y="0.0" width="233" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EuL-xD-5nq" firstAttribute="trailing" secondItem="sC4-wH-e7i" secondAttribute="trailing" id="1a7-oS-b79"/>
+                            <constraint firstItem="6cv-J3-b5R" firstAttribute="top" secondItem="EuL-xD-5nq" secondAttribute="bottom" constant="29" id="83u-0H-Nhv"/>
+                            <constraint firstItem="EuL-xD-5nq" firstAttribute="top" secondItem="sC4-wH-e7i" secondAttribute="top" id="J48-aw-Jz4"/>
+                            <constraint firstItem="sC4-wH-e7i" firstAttribute="trailing" secondItem="6cv-J3-b5R" secondAttribute="trailing" constant="10" id="Rd7-R6-sqM"/>
+                            <constraint firstItem="EuL-xD-5nq" firstAttribute="top" secondItem="sC4-wH-e7i" secondAttribute="top" id="Tvh-eL-28X"/>
+                            <constraint firstItem="6cv-J3-b5R" firstAttribute="leading" secondItem="sC4-wH-e7i" secondAttribute="leading" constant="10" id="Zlg-zq-vpS"/>
+                            <constraint firstItem="EuL-xD-5nq" firstAttribute="leading" secondItem="sC4-wH-e7i" secondAttribute="leading" id="fNd-sP-YPp"/>
+                            <constraint firstItem="EuL-xD-5nq" firstAttribute="leading" secondItem="sC4-wH-e7i" secondAttribute="leading" id="urO-3M-dVj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sC4-wH-e7i"/>
+                    </view>
+                    <connections>
+                        <outlet property="champTextField" destination="4bB-Vl-XDe" id="7SY-g5-oTD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYW-SQ-T2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="eSw-fk-oBu" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1273.913043478261" y="-1188.6160714285713"/>
+        </scene>
+        <!--Championships-->
+        <scene sceneID="X4K-q7-MMf">
+            <objects>
+                <tableViewController id="c4Q-1l-M4c" customClass="NBAChampionshipsController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7gN-co-bpZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChampionshipCell" id="fDr-JQ-YPN">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fDr-JQ-YPN" id="e3S-Be-bJR">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c4Q-1l-M4c" id="5Zi-cK-fvw"/>
+                            <outlet property="delegate" destination="c4Q-1l-M4c" id="Auq-3W-GGV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Championships" id="DRq-sf-NcT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="lo2-hQ-zmM">
+                            <connections>
+                                <segue destination="K06-G9-4fo" kind="modal" id="45F-De-70M"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T3b-ou-sWM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1274" y="-503"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="i3V-De-bgD">
+            <objects>
+                <navigationController id="0hl-vL-IFg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mSx-WK-ZpY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QTh-IO-yDF" kind="relationship" relationship="rootViewController" id="xo5-KT-YhD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ks-H8-Ojq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-483" y="-494"/>
+        </scene>
+    </scenes>
+</document>
