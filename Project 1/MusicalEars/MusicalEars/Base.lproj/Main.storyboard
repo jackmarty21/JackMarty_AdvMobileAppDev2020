@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BdY-1U-gM7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lobster-Regular.ttf">
+            <string>Lobster-Regular</string>
+        </array>
+        <array key="Montserrat-Black.ttf">
+            <string>Montserrat-Black</string>
+        </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Chord Progs-->
+        <scene sceneID="ZbP-JD-Gq8">
+            <objects>
+                <viewController id="9LJ-me-Zz1" customClass="ChordProgController" customModule="MusicalEars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u0z-hy-dmo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chord Progressions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSZ-7e-ww2">
+                                <rect key="frame" x="39" y="140" width="336" height="56.5"/>
+                                <fontDescription key="fontDescription" name="Lobster-Regular" family="Lobster" pointSize="45"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UJ-wv-lqe">
+                                <rect key="frame" x="147" y="212" width="120" height="52"/>
+                                <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="cP4-Hh-xh3"/>
+                                    <constraint firstAttribute="width" constant="120" id="srB-hq-C2X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="31"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSound:" destination="FET-Ys-MZS" eventType="touchUpInside" id="ZxY-sx-UNg"/>
+                                    <action selector="playSound:" destination="9LJ-me-Zz1" eventType="touchUpInside" id="zGV-a4-EHt"/>
+                                    <action selector="playSoundonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rRd-CH-wKr"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="qFS-qj-RQt">
+                                <rect key="frame" x="77" y="301" width="260" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdU-aN-M9Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="QjS-96-UkI"/>
+                                            <constraint firstAttribute="height" constant="35" id="x8t-xx-MLk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="I-ii">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="major2nd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mRX-Uv-RX9"/>
+                                            <action selector="majorButtonClicked:" destination="FET-Ys-MZS" eventType="touchUpInside" id="eaw-k1-KGJ"/>
+                                            <action selector="prog1ButtonClicked:" destination="9LJ-me-Zz1" eventType="touchUpInside" id="4kH-I4-H8x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wN-y1-Ft4">
+                                        <rect key="frame" x="150" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="5Kw-yt-tNR"/>
+                                            <constraint firstAttribute="width" constant="110" id="Atf-2y-Tcy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="I-IV">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="major3rd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qww-l4-wg4"/>
+                                            <action selector="minorButtonClicked:" destination="FET-Ys-MZS" eventType="touchUpInside" id="ZQ5-YR-tWQ"/>
+                                            <action selector="prog2ButtonClicked:" destination="9LJ-me-Zz1" eventType="touchUpInside" id="tm3-4j-j9z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-N0-zaq">
+                                <rect key="frame" x="77" y="366" width="260" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoL-9E-eOb">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="JQQ-0l-IZ3"/>
+                                            <constraint firstAttribute="width" constant="110" id="V6J-WL-kLA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="I-V">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dimButtonClicked:" destination="FET-Ys-MZS" eventType="touchUpInside" id="Viq-4t-uUN"/>
+                                            <action selector="perfect4th:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZc-7b-YZl"/>
+                                            <action selector="prog3ButtonClicked:" destination="9LJ-me-Zz1" eventType="touchUpInside" id="f8V-kd-VfQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUB-0b-fsG">
+                                        <rect key="frame" x="150" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="6eI-RD-Hba"/>
+                                            <constraint firstAttribute="width" constant="110" id="o0W-XG-hnZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="I-iv">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="augButtonClicked:" destination="FET-Ys-MZS" eventType="touchUpInside" id="gYw-as-agJ"/>
+                                            <action selector="perfect5th:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s9C-4v-SGS"/>
+                                            <action selector="prog4ButtonClicked:" destination="9LJ-me-Zz1" eventType="touchUpInside" id="Ty5-Lk-18d"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxo-ns-nSG">
+                                <rect key="frame" x="290" y="217" width="87" height="45"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="28"/>
+                                <state key="normal" title="Replay">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="replaySound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cl5-ru-fo4"/>
+                                    <action selector="replaySound:" destination="9LJ-me-Zz1" eventType="touchUpInside" id="FCw-X6-vzP"/>
+                                    <action selector="replaySound:" destination="FET-Ys-MZS" eventType="touchUpInside" id="xcC-89-CQn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 pts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzL-xO-e2k">
+                                <rect key="frame" x="56" y="221" width="71" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="28"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musical Ears" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFv-y0-0BV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.22352941179999999" blue="0.21960784310000001" alpha="0.76790823060000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="53R-y9-Glm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lobster-Regular" family="Lobster" pointSize="37"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.88235294119999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.88235294117647056" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0UJ-wv-lqe" firstAttribute="leading" secondItem="mzL-xO-e2k" secondAttribute="trailing" constant="20" id="0ee-zG-fB6"/>
+                            <constraint firstItem="0UJ-wv-lqe" firstAttribute="centerX" secondItem="u0z-hy-dmo" secondAttribute="centerX" id="1zE-Wz-qXR"/>
+                            <constraint firstItem="mzL-xO-e2k" firstAttribute="top" secondItem="bSZ-7e-ww2" secondAttribute="bottom" constant="24.5" id="3zX-4l-2ti"/>
+                            <constraint firstItem="bSZ-7e-ww2" firstAttribute="top" secondItem="lFv-y0-0BV" secondAttribute="bottom" constant="40" id="90E-hm-HyF"/>
+                            <constraint firstItem="qFS-qj-RQt" firstAttribute="leading" secondItem="yav-yN-lQr" secondAttribute="leading" constant="77" id="Ajj-US-DWp"/>
+                            <constraint firstItem="Zxo-ns-nSG" firstAttribute="leading" secondItem="0UJ-wv-lqe" secondAttribute="trailing" constant="23" id="CcI-Nt-6BC"/>
+                            <constraint firstItem="Zxo-ns-nSG" firstAttribute="top" secondItem="bSZ-7e-ww2" secondAttribute="bottom" constant="20.5" id="Ez9-jX-kxF"/>
+                            <constraint firstItem="bSZ-7e-ww2" firstAttribute="centerX" secondItem="u0z-hy-dmo" secondAttribute="centerX" id="P0D-8H-oya"/>
+                            <constraint firstItem="lFv-y0-0BV" firstAttribute="leading" secondItem="u0z-hy-dmo" secondAttribute="leading" id="QWs-0E-YXN"/>
+                            <constraint firstItem="yav-yN-lQr" firstAttribute="trailing" secondItem="SyB-N0-zaq" secondAttribute="trailing" constant="77" id="fd8-ri-hfN"/>
+                            <constraint firstItem="SyB-N0-zaq" firstAttribute="top" secondItem="qFS-qj-RQt" secondAttribute="bottom" constant="30" id="mCx-ll-qXQ"/>
+                            <constraint firstItem="SyB-N0-zaq" firstAttribute="leading" secondItem="yav-yN-lQr" secondAttribute="leading" constant="77" id="miC-Zg-dPR"/>
+                            <constraint firstItem="yav-yN-lQr" firstAttribute="trailing" secondItem="lFv-y0-0BV" secondAttribute="trailing" id="pzK-72-za1"/>
+                            <constraint firstItem="0UJ-wv-lqe" firstAttribute="top" secondItem="bSZ-7e-ww2" secondAttribute="bottom" constant="15.5" id="qJi-gf-Hte"/>
+                            <constraint firstItem="qFS-qj-RQt" firstAttribute="top" secondItem="0UJ-wv-lqe" secondAttribute="bottom" constant="37" id="ubk-in-qhG"/>
+                            <constraint firstItem="lFv-y0-0BV" firstAttribute="top" secondItem="u0z-hy-dmo" secondAttribute="top" id="vQB-ub-Cs2"/>
+                            <constraint firstItem="yav-yN-lQr" firstAttribute="trailing" secondItem="qFS-qj-RQt" secondAttribute="trailing" constant="77" id="zeO-sC-cIY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yav-yN-lQr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chord Progs" image="music.note.list" catalog="system" id="dE4-U6-g0T"/>
+                    <connections>
+                        <outlet property="playButton" destination="0UJ-wv-lqe" id="YkC-Du-w1Q"/>
+                        <outlet property="prog1Button" destination="OdU-aN-M9Q" id="mP7-Li-H5t"/>
+                        <outlet property="prog2Button" destination="2wN-y1-Ft4" id="0Um-fg-LgX"/>
+                        <outlet property="prog3Button" destination="BoL-9E-eOb" id="wcw-b5-RFt"/>
+                        <outlet property="prog4Button" destination="wUB-0b-fsG" id="hcc-Ax-zS6"/>
+                        <outlet property="replayButton" destination="Zxo-ns-nSG" id="gDh-Yc-yWh"/>
+                        <outlet property="scoreLabel" destination="mzL-xO-e2k" id="V7L-WE-x00"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOX-Gp-lU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-900" y="715"/>
+        </scene>
+        <!--Chord Types-->
+        <scene sceneID="FS3-t6-xC1">
+            <objects>
+                <viewController id="FET-Ys-MZS" customClass="ChordTypesController" customModule="MusicalEars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="id6-Vg-WtZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chord Types" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uy9-gq-fnl">
+                                <rect key="frame" x="84" y="140" width="246.5" height="66.5"/>
+                                <fontDescription key="fontDescription" name="Lobster-Regular" family="Lobster" pointSize="53"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJz-Oz-9jb">
+                                <rect key="frame" x="147" y="222" width="120" height="52"/>
+                                <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Tly-Ah-IUo"/>
+                                    <constraint firstAttribute="width" constant="120" id="Z3d-U3-6VP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="31"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSound:" destination="FET-Ys-MZS" eventType="touchUpInside" id="hc1-ll-ShT"/>
+                                    <action selector="playSoundonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Guq-Ga-zmR"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="c23-kQ-AbD">
+                                <rect key="frame" x="77" y="311" width="260" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRR-tD-WlS">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="4UF-3G-RxI"/>
+                                            <constraint firstAttribute="height" constant="35" id="sC3-IZ-lrz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Major">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="major2nd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1G-ib-mRz"/>
+                                            <action selector="majorButtonClicked:" destination="FET-Ys-MZS" eventType="touchUpInside" id="lBY-co-1oc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JjC-oc-SQJ">
+                                        <rect key="frame" x="150" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="2Yr-8s-Du8"/>
+                                            <constraint firstAttribute="height" constant="35" id="Tpi-97-cDa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Minor">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="major3rd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1BC-Ow-Bmo"/>
+                                            <action selector="minorButtonClicked:" destination="FET-Ys-MZS" eventType="touchUpInside" id="X7h-Hn-UYt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FgO-OR-R2P">
+                                <rect key="frame" x="77" y="376" width="260" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqk-vq-ZQa">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="iJv-sk-gKg"/>
+                                            <constraint firstAttribute="height" constant="35" id="vH9-SK-h0a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Diminished">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dimButtonClicked:" destination="FET-Ys-MZS" eventType="touchUpInside" id="Enf-Tj-WBL"/>
+                                            <action selector="perfect4th:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEH-Pc-3V6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMJ-f6-D7E">
+                                        <rect key="frame" x="150" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="dPA-E3-mlh"/>
+                                            <constraint firstAttribute="height" constant="35" id="sOi-l7-rS5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Augmented">
+                                            <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="augButtonClicked:" destination="FET-Ys-MZS" eventType="touchUpInside" id="QFI-H5-nPB"/>
+                                            <action selector="perfect5th:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Cd-7A-agX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 pts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MI-vQ-kZx">
+                                <rect key="frame" x="56" y="231" width="71" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="28"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musical Ears" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1d-Oy-6Em">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.22352941179999999" blue="0.21960784310000001" alpha="0.76790823060000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4xY-yP-Uig"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lobster-Regular" family="Lobster" pointSize="37"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.88235294119999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oin-Hm-uV9">
+                                <rect key="frame" x="290" y="227" width="87" height="45"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="28"/>
+                                <state key="normal" title="Replay">
+                                    <color key="titleColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="replaySound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gvx-7F-MGK"/>
+                                    <action selector="replaySound:" destination="FET-Ys-MZS" eventType="touchUpInside" id="wK3-R9-SQX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.88235294117647056" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lJp-Fi-bu2" firstAttribute="trailing" secondItem="FgO-OR-R2P" secondAttribute="trailing" constant="77" id="885-sh-CY7"/>
+                            <constraint firstItem="Oin-Hm-uV9" firstAttribute="leading" secondItem="JJz-Oz-9jb" secondAttribute="trailing" constant="23" id="Avk-ss-gOp"/>
+                            <constraint firstItem="JJz-Oz-9jb" firstAttribute="top" secondItem="uy9-gq-fnl" secondAttribute="bottom" constant="15.5" id="DeW-EJ-R42"/>
+                            <constraint firstItem="JJz-Oz-9jb" firstAttribute="leading" secondItem="3MI-vQ-kZx" secondAttribute="trailing" constant="20" id="FEy-7U-RbF"/>
+                            <constraint firstItem="FgO-OR-R2P" firstAttribute="top" secondItem="c23-kQ-AbD" secondAttribute="bottom" constant="30" id="H4O-2B-JER"/>
+                            <constraint firstItem="FgO-OR-R2P" firstAttribute="leading" secondItem="lJp-Fi-bu2" secondAttribute="leading" constant="77" id="KPd-xH-sO7"/>
+                            <constraint firstItem="lJp-Fi-bu2" firstAttribute="trailing" secondItem="c23-kQ-AbD" secondAttribute="trailing" constant="77" id="Ka2-tT-Vt2"/>
+                            <constraint firstItem="c23-kQ-AbD" firstAttribute="top" secondItem="JJz-Oz-9jb" secondAttribute="bottom" constant="37" id="MDt-Z0-SSe"/>
+                            <constraint firstItem="G1d-Oy-6Em" firstAttribute="top" secondItem="id6-Vg-WtZ" secondAttribute="top" id="NPi-ES-njk"/>
+                            <constraint firstItem="c23-kQ-AbD" firstAttribute="leading" secondItem="lJp-Fi-bu2" secondAttribute="leading" constant="77" id="RS7-jz-dwS"/>
+                            <constraint firstItem="JJz-Oz-9jb" firstAttribute="centerX" secondItem="id6-Vg-WtZ" secondAttribute="centerX" id="Uii-Ke-oT2"/>
+                            <constraint firstItem="uy9-gq-fnl" firstAttribute="centerX" secondItem="id6-Vg-WtZ" secondAttribute="centerX" id="VhQ-0U-G1i"/>
+                            <constraint firstItem="3MI-vQ-kZx" firstAttribute="top" secondItem="uy9-gq-fnl" secondAttribute="bottom" constant="24.5" id="XZu-oe-JqE"/>
+                            <constraint firstItem="G1d-Oy-6Em" firstAttribute="leading" secondItem="lJp-Fi-bu2" secondAttribute="leading" id="iZ9-FR-jXk"/>
+                            <constraint firstItem="uy9-gq-fnl" firstAttribute="top" secondItem="G1d-Oy-6Em" secondAttribute="bottom" constant="40" id="ipn-pg-6ke"/>
+                            <constraint firstAttribute="trailing" secondItem="G1d-Oy-6Em" secondAttribute="trailing" id="oiw-Hi-tpA"/>
+                            <constraint firstItem="Oin-Hm-uV9" firstAttribute="top" secondItem="uy9-gq-fnl" secondAttribute="bottom" constant="20.5" id="yHK-TL-F7y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lJp-Fi-bu2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chord Types" image="music.house.fill" catalog="system" id="fzW-UH-hVH"/>
+                    <connections>
+                        <outlet property="augButton" destination="xMJ-f6-D7E" id="YhQ-yj-b0T"/>
+                        <outlet property="dimButton" destination="Sqk-vq-ZQa" id="F8P-hp-ah4"/>
+                        <outlet property="majorButton" destination="nRR-tD-WlS" id="tJb-0V-ZMb"/>
+                        <outlet property="minorButton" destination="JjC-oc-SQJ" id="m8T-T9-3aF"/>
+                        <outlet property="playButton" destination="JJz-Oz-9jb" id="Z1Q-22-FYh"/>
+                        <outlet property="replayButton" destination="Oin-Hm-uV9" id="N0S-r5-eba"/>
+                        <outlet property="scoreLabel" destination="3MI-vQ-kZx" id="ecD-pH-ZBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3P-oD-Q62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675.36231884057975" y="-24.107142857142858"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SpG-HE-fbs">
+            <objects>
+                <tabBarController id="BdY-1U-gM7" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qo6-QL-1It">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.88235294119999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="d09-zz-Bu2"/>
+                        <segue destination="FET-Ys-MZS" kind="relationship" relationship="viewControllers" id="XGx-lu-jlA"/>
+                        <segue destination="9LJ-me-Zz1" kind="relationship" relationship="viewControllers" id="yWc-22-oSu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn6-Gk-HDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1734" y="-24"/>
+        </scene>
+        <!--Intervals-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicalEars" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intervals" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7r-jy-ahX">
+                                <rect key="frame" x="116" y="140" width="182" height="66.5"/>
+                                <fontDescription key="fontDescription" name="Lobster-Regular" family="Lobster" pointSize="53"/>
+                                <color key="textColor" red="0.30196078431372547" green="0.22745098039215686" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLb-QA-ayc">
+                                <rect key="frame" x="147" y="222" width="120" height="52"/>
+                                <color key="backgroundColor" red="0.6705882353" green="0.5568627451" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="r0R-Tk-cf0"/>
+                                    <constraint firstAttribute="height" constant="52" id="thF-wB-xuI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="31"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.30196078431372547" green="0.22745098039215686" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSoundonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F0u-kk-AD1"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="VKA-Of-9Lx">
+                                <rect key="frame" x="77" y="311" width="260" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mka-Op-Jxm">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882352941176" green="0.55686274509803924" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="jPT-Rl-EBd"/>
+                                            <constraint firstAttribute="width" constant="110" id="quo-On-9Ut"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Major 2nd">
+                                            <color key="titleColor" red="0.30196078431372547" green="0.22745098039215686" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="major2nd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0M0-m1-Wev"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3al-nE-Ft5">
+                                        <rect key="frame" x="150" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882352941176" green="0.55686274509803924" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Txj-oP-2oD"/>
+                                            <constraint firstAttribute="width" constant="110" id="ZTj-RL-fLg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Major 3rd">
+                                            <color key="titleColor" red="0.30196078431372547" green="0.22745098039215686" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="major3rd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QSb-Oz-VbM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="kgz-Qn-f6a">
+                                <rect key="frame" x="77" y="383" width="260" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tkd-tQ-mdM">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882352941176" green="0.55686274509803924" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="dC8-df-x6K"/>
+                                            <constraint firstAttribute="width" constant="110" id="dkK-0Z-r03"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Perfect 4th">
+                                            <color key="titleColor" red="0.30196078431372547" green="0.22745098039215686" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="perfect4th:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sqw-MW-8vp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jei-UP-GKr">
+                                        <rect key="frame" x="150" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882352941176" green="0.55686274509803924" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="KF8-cT-5jt"/>
+                                            <constraint firstAttribute="height" constant="35" id="gES-CS-Hft"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Perfect 5th">
+                                            <color key="titleColor" red="0.30196078431372547" green="0.22745098039215686" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="perfect5th:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KVA-vS-dPu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="PHR-nu-fkj">
+                                <rect key="frame" x="77" y="455" width="260" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aR-50-lVL">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882352941176" green="0.55686274509803924" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="110" id="adC-FW-FvS"/>
+                                            <constraint firstAttribute="height" constant="35" id="yCu-Db-pTe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Major 6th">
+                                            <color key="titleColor" red="0.30196078431372547" green="0.22745098039215686" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="major6th:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8JT-4M-ETs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZv-tp-2t7">
+                                        <rect key="frame" x="150" y="0.0" width="110" height="35"/>
+                                        <color key="backgroundColor" red="0.6705882352941176" green="0.55686274509803924" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="QCc-3l-CHg"/>
+                                            <constraint firstAttribute="width" constant="110" id="myd-tZ-1z9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Major 7th">
+                                            <color key="titleColor" red="0.30196078431372547" green="0.22745098039215686" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="major7th:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fgp-sD-vDv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 pts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW5-Xt-bKg">
+                                <rect key="frame" x="56" y="231" width="71" height="34.5"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="28"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.2274509804" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4l8-T0-049">
+                                <rect key="frame" x="287" y="227" width="87" height="45"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="28"/>
+                                <state key="normal" title="Replay">
+                                    <color key="titleColor" red="0.30196078431372547" green="0.22745098039215686" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="replaySound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Epq-Ns-WdO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musical Ears" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdL-5l-g4b">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <color key="backgroundColor" red="0.32156862745098036" green="0.22352941176470587" blue="0.2196078431372549" alpha="0.76790823060000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="UuR-ao-Kkl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Lobster-Regular" family="Lobster" pointSize="37"/>
+                                <color key="textColor" red="0.98039215690000003" green="0.88235294119999996" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.88235294117647056" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="IdL-5l-g4b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1c4-2p-N6Y"/>
+                            <constraint firstItem="4l8-T0-049" firstAttribute="top" secondItem="l7r-jy-ahX" secondAttribute="bottom" constant="20.5" id="6aQ-zt-dWt"/>
+                            <constraint firstItem="HW5-Xt-bKg" firstAttribute="top" secondItem="l7r-jy-ahX" secondAttribute="bottom" constant="24.5" id="7Js-vR-z6L"/>
+                            <constraint firstItem="PHR-nu-fkj" firstAttribute="top" secondItem="kgz-Qn-f6a" secondAttribute="bottom" constant="37" id="7Xw-tX-C2f"/>
+                            <constraint firstItem="oLb-QA-ayc" firstAttribute="leading" secondItem="HW5-Xt-bKg" secondAttribute="trailing" constant="20" id="BNi-X6-gry"/>
+                            <constraint firstItem="kgz-Qn-f6a" firstAttribute="top" secondItem="VKA-Of-9Lx" secondAttribute="bottom" constant="37" id="Bvo-CJ-UMw"/>
+                            <constraint firstItem="l7r-jy-ahX" firstAttribute="top" secondItem="IdL-5l-g4b" secondAttribute="bottom" constant="40" id="CGt-Df-O4I"/>
+                            <constraint firstItem="VKA-Of-9Lx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DaS-L8-uyM"/>
+                            <constraint firstItem="oLb-QA-ayc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ESQ-fC-Wqc"/>
+                            <constraint firstItem="IdL-5l-g4b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JOK-fz-do7"/>
+                            <constraint firstItem="oLb-QA-ayc" firstAttribute="top" secondItem="l7r-jy-ahX" secondAttribute="bottom" constant="15.5" id="bGw-va-Hdc"/>
+                            <constraint firstItem="VKA-Of-9Lx" firstAttribute="top" secondItem="oLb-QA-ayc" secondAttribute="bottom" constant="37" id="bHO-o6-YYJ"/>
+                            <constraint firstItem="PHR-nu-fkj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="baI-Cm-fly"/>
+                            <constraint firstItem="IdL-5l-g4b" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mm4-uu-WpF"/>
+                            <constraint firstItem="oLb-QA-ayc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="orP-dk-ae2"/>
+                            <constraint firstItem="kgz-Qn-f6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vdk-eR-tS5"/>
+                            <constraint firstItem="oLb-QA-ayc" firstAttribute="top" secondItem="l7r-jy-ahX" secondAttribute="bottom" constant="15.5" id="xEj-5J-EOR"/>
+                            <constraint firstItem="l7r-jy-ahX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yMM-g4-0Vi"/>
+                            <constraint firstItem="4l8-T0-049" firstAttribute="leading" secondItem="oLb-QA-ayc" secondAttribute="trailing" constant="20" id="zVw-vt-MX4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="orP-dk-ae2"/>
+                                <exclude reference="xEj-5J-EOR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="ESQ-fC-Wqc"/>
+                                <include reference="orP-dk-ae2"/>
+                                <include reference="xEj-5J-EOR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Intervals" image="music.note" catalog="system" id="pRb-p5-72X"/>
+                    <navigationItem key="navigationItem" id="CsQ-6y-8oY"/>
+                    <connections>
+                        <outlet property="button2nd" destination="Mka-Op-Jxm" id="c7u-TJ-1Vx"/>
+                        <outlet property="button3rd" destination="3al-nE-Ft5" id="9VT-ZI-I39"/>
+                        <outlet property="button4th" destination="Tkd-tQ-mdM" id="RXC-MY-A3v"/>
+                        <outlet property="button5th" destination="jei-UP-GKr" id="gcx-Ev-O2V"/>
+                        <outlet property="button6th" destination="4aR-50-lVL" id="BSS-KR-7g3"/>
+                        <outlet property="button7th" destination="iZv-tp-2t7" id="19q-bu-A2J"/>
+                        <outlet property="buttonPlay" destination="oLb-QA-ayc" id="6ku-cJ-c1S"/>
+                        <outlet property="buttonReplay" destination="4l8-T0-049" id="65X-18-hF3"/>
+                        <outlet property="totalQuestions" destination="HW5-Xt-bKg" id="Cm0-fw-3vZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-900.00000000000011" y="-715.17857142857144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="music.house.fill" catalog="system" width="64" height="52"/>
+        <image name="music.note" catalog="system" width="48" height="64"/>
+        <image name="music.note.list" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
