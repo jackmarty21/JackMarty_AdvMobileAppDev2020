@@ -31,6 +31,10 @@ class ChordProgController: UIViewController {
         
         replayButton.isHidden = false
     }
+    @IBAction func resetButton(_ sender: UIButton) {
+        correctAnswers = 0
+        scoreLabel.text = "\(correctAnswers) pts"
+    }
     @IBAction func replaySound(_ sender: Any) {
         playSound(fileName: String(currentFile))
     }

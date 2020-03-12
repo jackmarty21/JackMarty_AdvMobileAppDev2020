@@ -24,6 +24,10 @@ class ChordTypesController: UIViewController {
     var currentFile : Int = 0
     var correctAnswers = 0
     
+    @IBAction func resetButton(_ sender: UIButton) {
+        correctAnswers = 0
+        scoreLabel.text = "\(correctAnswers) pts"
+    }
     @IBAction func playSound(_ sender: Any) {
         currentFile = Int.random(in: 8 ... 11)
         playSound(fileName: String(currentFile))

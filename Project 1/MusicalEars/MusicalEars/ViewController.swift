@@ -35,6 +35,10 @@ class ViewController: UIViewController {
         buttonReplay.isHidden = false
     }
     
+    @IBAction func resetButton(_ sender: UIButton) {
+        correctAnswers = 0
+        totalQuestions.text = "\(correctAnswers) pts"
+    }
     //Replay sound after user taps play button
     @IBAction func replaySound(_ sender: UIButton) {
         playSound(fileName: String(currentFile))
