@@ -34,14 +34,13 @@ class AlbumDataController {
 
     func loadData() {
         
-        db.collection("runs").addSnapshotListener { querySnapshot, error in
+        db.collection("albums").addSnapshotListener { querySnapshot, error in
             
             guard let collection = querySnapshot else {
                 print("Error fetching collection: \(error!)")
                 return
             }
             let docs = collection.documents
-            
             self.albumData.removeAll()
             for doc in docs {
                 let data = doc.data()
@@ -56,6 +55,20 @@ class AlbumDataController {
             
         }
         
+    }
+    func writeData(artist: String, albumName: String, year: String) {
+        
+        db.collection("albums").addDocument(data: [
+            "artist": artist,
+            "name": albumName,
+            "year": year,
+        ], completion: { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("new document added successfully!")
+            }
+        })
         
     }
 }

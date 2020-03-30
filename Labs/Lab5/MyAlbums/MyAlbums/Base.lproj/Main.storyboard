@@ -39,6 +39,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ehl-xo-4OR" kind="show" identifier="ShowDetail" id="WWe-0w-Z4z"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -57,6 +60,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tq5-JJ-wHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1192.753623188406" y="-202.23214285714286"/>
+        </scene>
+        <!--Album-->
+        <scene sceneID="qio-6o-hge">
+            <objects>
+                <viewController id="ehl-xo-4OR" customClass="DetailViewController" customModule="MyAlbums" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mYz-bi-J48">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jK4-wi-lpu">
+                                <rect key="frame" x="30" y="118" width="101" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="uzn-83-8nk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIL-Yq-ufM">
+                                <rect key="frame" x="342" y="118" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPj-Qt-2pK">
+                                <rect key="frame" x="30" y="168.5" width="108" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="qkM-GK-7pE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZt-TD-mNg">
+                                <rect key="frame" x="30" y="219" width="93" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="0bb-16-zUa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rm7-eL-KUJ">
+                                <rect key="frame" x="342" y="168.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vc5-YI-Kze">
+                                <rect key="frame" x="342" y="219" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RZt-TD-mNg" firstAttribute="leading" secondItem="7te-hw-Joe" secondAttribute="leading" constant="30" id="BJN-nn-P3M"/>
+                            <constraint firstItem="cIL-Yq-ufM" firstAttribute="top" secondItem="7te-hw-Joe" secondAttribute="top" constant="30" id="Elk-rw-qmt"/>
+                            <constraint firstItem="jK4-wi-lpu" firstAttribute="top" secondItem="7te-hw-Joe" secondAttribute="top" constant="30" id="Fpr-fW-k50"/>
+                            <constraint firstItem="QPj-Qt-2pK" firstAttribute="leading" secondItem="7te-hw-Joe" secondAttribute="leading" constant="30" id="M2T-Hg-SA8"/>
+                            <constraint firstItem="vc5-YI-Kze" firstAttribute="top" secondItem="rm7-eL-KUJ" secondAttribute="bottom" constant="30" id="VqU-bf-Uwn"/>
+                            <constraint firstItem="rm7-eL-KUJ" firstAttribute="top" secondItem="cIL-Yq-ufM" secondAttribute="bottom" constant="30" id="bge-Qt-CgL"/>
+                            <constraint firstItem="jK4-wi-lpu" firstAttribute="leading" secondItem="7te-hw-Joe" secondAttribute="leading" constant="30" id="bn1-Dn-hDv"/>
+                            <constraint firstItem="7te-hw-Joe" firstAttribute="trailing" secondItem="vc5-YI-Kze" secondAttribute="trailing" constant="30" id="eAj-zZ-TuZ"/>
+                            <constraint firstItem="7te-hw-Joe" firstAttribute="trailing" secondItem="rm7-eL-KUJ" secondAttribute="trailing" constant="30" id="iJe-aF-oge"/>
+                            <constraint firstItem="QPj-Qt-2pK" firstAttribute="top" secondItem="jK4-wi-lpu" secondAttribute="bottom" constant="30" id="lUq-kb-SmU"/>
+                            <constraint firstItem="RZt-TD-mNg" firstAttribute="top" secondItem="QPj-Qt-2pK" secondAttribute="bottom" constant="30" id="rp8-gy-Yob"/>
+                            <constraint firstItem="7te-hw-Joe" firstAttribute="trailing" secondItem="cIL-Yq-ufM" secondAttribute="trailing" constant="30" id="zGs-il-2ZP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7te-hw-Joe"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Album" id="5pL-zl-rLq"/>
+                    <connections>
+                        <outlet property="albumLabel" destination="vc5-YI-Kze" id="bpx-Gu-HhM"/>
+                        <outlet property="artistLabel" destination="cIL-Yq-ufM" id="PXv-O3-Iil"/>
+                        <outlet property="yearLabel" destination="rm7-eL-KUJ" id="M4J-1g-pHu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhb-Vx-GbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192.753623188406" y="568.52678571428567"/>
         </scene>
         <!--Add Album Controller-->
         <scene sceneID="DoK-1I-OsE">

@@ -35,9 +35,28 @@ class AlbumTableViewController: UITableViewController {
     }
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        
+        if segue.identifier == "SaveSegue" {
+            let sourceVC = segue.source as! AddAlbumController
+            //double check that we have values
+            
+            if let userArtist = sourceVC.artist, let userAlbum = sourceVC.name, let userYear = sourceVC.year {
+                albumDC.writeData(artist: userArtist, albumName: userAlbum, year: userYear)
+            }
+        }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            //downcast destination
+            let vc = segue.destination as! DetailViewController
+            //get index of run to view
+            let idx = tableView.indexPath(for: (sender as! UITableViewCell))
+            //pass the run along
+            vc.album = albumData[idx!.row]
+            
+        }
+    }
+    
     func newData(data: [Album]) {
         
         albumData = data
