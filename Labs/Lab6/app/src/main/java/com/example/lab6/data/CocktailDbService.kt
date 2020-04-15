@@ -1,6 +1,5 @@
 package com.example.lab6.data
 
-import com.example.lab6.API_KEY
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

@@ -13,7 +13,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.example.lab6.IMAGE_BASE_URL
 import com.example.lab6.R
 
 import kotlinx.android.synthetic.main.fragment_cocktail_detail.*
@@ -67,9 +66,9 @@ class CocktailDetailFragment : Fragment(){
             recipeTitleTextView.text = it.strDrink
 
             //images can be fetched using the following pattern: https://spoonacular.com/recipeImages/{ID}-{SIZE}.{TYPE}
-//            Glide.with(this)
-//                .load("${IMAGE_BASE_URL}/${it.idDrink}-556x370.jpg")
-//                .into(imageView)
+            Glide.with(this)
+                .load("${it.strDrinkThumb}")
+                .into(imageView)
         })
 
         return root
