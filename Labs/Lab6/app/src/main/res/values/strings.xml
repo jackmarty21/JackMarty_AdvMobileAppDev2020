@@ -11,4 +11,6 @@
     <string name="cocktail_image">cocktail image</string>
     <string name="search_recipes">Search cocktails</string>
     <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="remove">Remove</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.lab6.ui.search
+package com.example.lab6.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lab6.R
 import com.example.lab6.data.Cocktail
 
-class SearchRecyclerAdapter(val context: Context, val cocktailList: List<Cocktail>, val itemListener: CocktailItemListener) : RecyclerView.Adapter<SearchRecyclerAdapter.ViewHolder>()  {
+class CocktailRecyclerAdapter(val context: Context, var cocktailList: List<Cocktail>, val itemListener: CocktailItemListener) : RecyclerView.Adapter<CocktailRecyclerAdapter.ViewHolder>()  {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val titleText = itemView.findViewById<TextView>(R.id.titleTextView)
@@ -30,7 +30,7 @@ class SearchRecyclerAdapter(val context: Context, val cocktailList: List<Cocktai
 
         //pass the data item to the fragment click listener
         holder.itemView.setOnClickListener {
-            itemListener.onCocktailItemClick(curCocktail)
+             itemListener.onCocktailItemClick(curCocktail)
         }
     }
 

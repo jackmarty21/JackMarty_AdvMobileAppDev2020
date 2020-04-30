@@ -10,20 +10,34 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity(), FragmentManager.OnBackStackChangedListener {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
+    private lateinit var navView: BottomNavigationView
+
+    //show/hide bottom nav and up nav arrow based on where we are navigating to
+    private val navControllerListener = NavController.OnDestinationChangedListener { controller, destination, arguments ->
+        if(destination.id == R.id.navigation_favorites || destination.id == R.id.navigation_search) {
+            //show bottom nav and hide up arrow
+            supportActionBar?.setDisplayHomeAsUpEnabled(false)
+            navView.visibility = android.view.View.VISIBLE
+        } else {
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            navView.visibility = android.view.View.GONE
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+        navView = findViewById(R.id.nav_view)
 
         navController = findNavController(R.id.nav_host_fragment)
+        navController.addOnDestinationChangedListener(navControllerListener)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.navigation_search, R.id.navigation_favorites))
+            R.id.navigation_search, R.id.navigation_favorites))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
@@ -33,12 +47,4 @@ class MainActivity : AppCompatActivity(), FragmentManager.OnBackStackChangedList
         return true;
     }
 
-    override fun onBackStackChanged() {
-        shouldDisplayHomeUp()
-    }
-
-    private fun shouldDisplayHomeUp() {
-        val canGoBack = supportFragmentManager.backStackEntryCount > 0
-        supportActionBar?.setDisplayHomeAsUpEnabled(canGoBack)
-    }
 }

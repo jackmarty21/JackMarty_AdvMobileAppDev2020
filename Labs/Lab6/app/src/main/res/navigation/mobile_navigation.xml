@@ -15,19 +15,23 @@
             app:destination="@id/searchResultsFragment" />
     </fragment>
 
-<!--    <fragment-->
-<!--        android:id="@+id/navigation_favorites"-->
-<!--        android:name="com.isaac.recipes.ui.favorites.FavoritesFragment"-->
-<!--        android:label="@string/title_favorites"-->
-<!--        tools:layout="@layout/fragment_favorites" />-->
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="com.example.lab6.ui.favorites.FavoritesFragment"
+        android:label="@string/title_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_navigation_favorites_to_cocktailDetailFragment"
+            app:destination="@id/cocktailDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cocktailDetailFragment"
-        android:name="com.example.lab6.ui.search.CocktailDetailFragment"
+        android:name="com.example.lab6.ui.details.CocktailDetailFragment"
         android:label=""
         tools:layout="@layout/fragment_cocktail_detail" />
     <fragment
         android:id="@+id/searchResultsFragment"
-        android:name="com.example.lab6.ui.search.SearchResultsFragment"
+        android:name="com.example.lab6.ui.search.results.SearchResultsFragment"
         android:label="fragment_search_results"
         tools:layout="@layout/fragment_search_results" >
         <action

@@ -1,4 +1,4 @@
-package com.example.lab6.ui.search
+package com.example.lab6.ui.search.results
 
 import android.os.Bundle
 import android.util.Log
@@ -14,11 +14,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.lab6.LOG_TAG
 import com.example.lab6.R
 import com.example.lab6.data.Cocktail
+import com.example.lab6.ui.adapters.CocktailRecyclerAdapter
+import com.example.lab6.ui.search.SearchViewModel
 
 /**
  * A simple [Fragment] subclass.
  */
-class SearchResultsFragment : Fragment(), SearchRecyclerAdapter.CocktailItemListener {
+class SearchResultsFragment : Fragment(), CocktailRecyclerAdapter.CocktailItemListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var searchViewModel: SearchViewModel
@@ -44,11 +46,12 @@ class SearchResultsFragment : Fragment(), SearchRecyclerAdapter.CocktailItemList
         //subscribe to data changes in the repository class via the ViewModel
         searchViewModel.cocktailData.observe(viewLifecycleOwner, Observer {
             //instantiate adapter
-            val adapter = SearchRecyclerAdapter(
-                requireContext(),
-                it,
-                this
-            )
+            val adapter =
+                CocktailRecyclerAdapter(
+                    requireContext(),
+                    it,
+                    this
+                )
             //set the adapter to the recyclerview
             recyclerView.adapter = adapter
         })

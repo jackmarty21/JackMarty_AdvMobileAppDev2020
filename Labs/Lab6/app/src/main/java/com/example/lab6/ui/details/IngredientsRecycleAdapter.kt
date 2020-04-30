@@ -1,4 +1,4 @@
-package com.example.lab6.ui.search
+package com.example.lab6.ui.details
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -17,7 +17,7 @@ class IngredientsRecycleAdapter(val context: Context, val ingredientList: List<S
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): IngredientsRecycleAdapter.ViewHolder {
+    ): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val view = inflater.inflate(R.layout.ingredient_list_item, parent, false)
         return ViewHolder(view)
