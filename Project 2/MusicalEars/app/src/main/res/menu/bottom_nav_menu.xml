@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_intervals"
+        android:icon="@mipmap/ic_intervals_foreground"
+        android:title="@string/title_intervals" />
+
+    <item
+        android:id="@+id/navigation_chords"
+        android:icon="@mipmap/ic_chords_foreground"
+        android:title="@string/title_chords" />
+
+    <item
+        android:id="@+id/navigation_chordprogs"
+        android:icon="@mipmap/ic_chordprogs_foreground"
+        android:title="@string/title_chordprogs" />
+
+</menu>

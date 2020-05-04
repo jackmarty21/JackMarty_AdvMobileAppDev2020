@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MusicalEars</string>
+    <string name="title_intervals">Intervals</string>
+    <string name="title_chords">Chords</string>
+    <string name="title_chordprogs">Chord Progressions</string>
+    <string name="title_intervaltest">Interval Test</string>
+    <string name="title_chordtest">Chord Test</string>
+    <string name="title_chordprogstest">Chord Progressions Test</string>
+    <string name="play">Play</string>
+    <string name="Replay">Replay</string>
+    <!--    Intervals-->
+    <string name="m2">Minor 2nd</string>
+    <string name="M2">Major 2nd</string>
+    <string name="m3">Minor 3rd</string>
+    <string name="M3">Major 3rd</string>
+    <string name="p4">Perfect 4th</string>
+    <string name="tri">Tritone</string>
+    <string name="p5">Perfect 5th</string>
+    <string name="m6">Minor 6th</string>
+    <string name="M6">Major 6th</string>
+    <string name="m7">Minor 7th</string>
+    <string name="M7">Major 7th</string>
+    <string name="p8">Octave</string>
+    <string name="count">0 pts</string>
+    <!--    Chords-->
+    <string name="major">Major</string>
+    <string name="minor">Minor</string>
+    <string name="Diminished">Diminished</string>
+    <string name="Augmented">Augmented</string>
+    <!--    Chord Progressions-->
+    <string name="Iii">I-ii</string>
+    <string name="IIV">I-IV</string>
+    <string name="IV">I-V</string>
+    <string name="Iiv">I-iv</string>
+</resources>

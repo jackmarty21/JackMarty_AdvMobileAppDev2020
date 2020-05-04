@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_intervals">
+
+    <fragment
+        android:id="@+id/navigation_intervals"
+        android:name="com.example.musicalears.ui.intervals.IntervalsFragment"
+        android:label="@string/title_intervals"
+        tools:layout="@layout/fragment_intervals" />
+
+    <fragment
+        android:id="@+id/navigation_chords"
+        android:name="com.example.musicalears.ui.chords.ChordsFragment"
+        android:label="@string/title_chords"
+        tools:layout="@layout/fragment_chords" />
+
+    <fragment
+        android:id="@+id/navigation_chordprogs"
+        android:name="com.example.musicalears.ui.chordprogs.ChordProgsFragment"
+        android:label="@string/title_chordprogs"
+        tools:layout="@layout/fragment_chordprogs" />
+</navigation>
