@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "56171958051",
+    "firebase_url": "https://cocktail-app-3af61.firebaseio.com",
+    "project_id": "cocktail-app-3af61",
+    "storage_bucket": "cocktail-app-3af61.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56171958051:android:b805106533193e420cc696",
+        "android_client_info": {
+          "package_name": "com.example.lab6"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56171958051-btr9ean4053g3v827i7dhjs4adhmc4oi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmaFhc7O_0N-5d_9-ncJD9NCdxQUaSD8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56171958051-btr9ean4053g3v827i7dhjs4adhmc4oi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
